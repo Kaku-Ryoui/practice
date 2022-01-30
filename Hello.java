@@ -9,7 +9,7 @@ public class Hello {
         try {
         	File file = new File("C:\\Users\\KK\\test.txt");//これだけだとfileは作成されない
         	FileWriter filewriter = new FileWriter(file);
-        	filewriter.write("Hello！Hello！Hello！Hello！Hello！Hello！Hello！Hello！");
+        	filewriter.write("Hello！World");
         	
         	filewriter.close();
         }catch(IOException e){
