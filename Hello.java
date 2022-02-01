@@ -1,4 +1,3 @@
-import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
@@ -6,15 +5,11 @@ public class Hello {
     public static void main(String[] args) {
         System.out.println("Hello!");
         System.out.println("test");
-        try {
-        	File file = new File("C:\\Users\\KK\\test.txt");//これだけだとfileは作成されない
-        	FileWriter filewriter = new FileWriter(file);
-        	filewriter.write("Hello！World");
-        	
-        	filewriter.close();
+        // FileWriterクラスのオブジェクトを生成する
+        try(FileWriter filewriter = new FileWriter("C:\\Users\\KK\\test.txt");){
+        	filewriter.write("2/1test");
         }catch(IOException e){
         	System.out.println(e);
         }
-        
     }
 }
